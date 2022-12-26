@@ -17,12 +17,12 @@ const loadEnv = (envName) => {
     }
 }
 
-const creatDatabase = async (databaseName) => {
+const createDatabase = async (databaseName) => {
     const client = new Client()
     try {
         await client.connect()
         console.log(`Creating ${databaseName} database...`)
-        await client.qurey(`CREATE DATABASE ${databaseName}`)
+        await client.query(`CREATE DATABASE ${databaseName}`)
         console.log('Database created!')
     } catch (err) {
         switch (err.code) {
@@ -37,4 +37,4 @@ const creatDatabase = async (databaseName) => {
     }
 }
 const databaseName = loadEnv(envName)
-creatDatabase(databaseName)
+createDatabase(databaseName)

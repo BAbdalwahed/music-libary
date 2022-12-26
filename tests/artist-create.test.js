@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const request = require('supertest');
 const app = require('../src/app');
 
-describe('creat artist', () => {
+describe('create artist', () => {
   describe('/artists', () => {
     describe('POST', () => {
       it('creates a new artist in the database', async () => {

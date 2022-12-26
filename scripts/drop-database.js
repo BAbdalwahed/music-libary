@@ -26,7 +26,7 @@ const dropDatabase = async (databaseName) => {
 
         console.log(`Destroying ${databaseName} database...`)
         
-        await client.qurey(`DROP DATABASE ${databaseName} WITH (FORCE)`)
+        await client.query(`DROP DATABASE ${databaseName} WITH (FORCE)`)
         
         console.log('Database destroyed!')
     } catch (err) {

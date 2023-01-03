@@ -38,12 +38,9 @@ describe('Read Artists', () => {
         expect(artistRecord).to.deep.equal(expected)
       })
     })
-  })
-})
-
-describe('GET /artists/{id}', () => {
-    let artists
     
+  })
+  describe('GET /artists/{id}', () => {
     it('returns the artist with the correct id', async () => {
       const { status, body } = await request(app).get(`/artists/${artists[0].id}`).send()
 
@@ -58,3 +55,6 @@ describe('GET /artists/{id}', () => {
       expect(body.message).to.equal('artist 999999999 does not exist')
     })
   })
+
+})
+
